@@ -207,9 +207,18 @@
             <h1 id="间书"><a href="#间书" class="headerlink" title="间书"></a>间书</h1><p><a target="_blank" rel="noopener" href="https://t.me/err44_jianshu">Telegram群</a></p>
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>获取页面HTML，订阅元素转为RSS，搭配本地web实现订阅动态。</p>
 <p>#Python #RSS</p>
-<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>HTML元素转RSS o </p>
-<p>静态页面 o 单代理 o </p>
-<p>动态页面 x 多代理 x GUI x UI隐藏 x</p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><blockquote>
+<p>已有</p>
+</blockquote>
+<p>v0.5</p>
+<p>动态页面</p>
+<p>v0.4 - v0.1</p>
+<p>HTML元素转RSS</p>
+<p>静态页面、单代理</p>
+<blockquote>
+<p>预定</p>
+</blockquote>
+<p>多代理、GUI、UI隐藏</p>
 <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><blockquote>
 <p>rss/</p>
 </blockquote>
@@ -217,34 +226,69 @@
 <blockquote>
 <p>data/</p>
 </blockquote>
-<p>model.ini    订阅模板</p>
-<p>config.ini    配置文件</p>
+<p>model.ini    订阅模板，可动态修改</p>
+<p>v0.5</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">动态页面：</span><br><span class="line">0否 1是</span><br></pre></td></tr></table></figure>
+
+<p>v0.4 - v0.1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">过滤选项：</span><br><span class="line">0标题 1链接</span><br><span class="line"></span><br><span class="line">保存目录：</span><br><span class="line">留空，自动获取</span><br><span class="line">不留空，谱写格式：域名&#x2F;rss&#x2F;保存目录复数id</span><br><span class="line">例：保存目录&#x3D;&quot;A&#x2F;&quot;</span><br><span class="line">127.0.0.1&#x2F;rss&#x2F;A&#x2F;666</span><br><span class="line">如单页面去掉末尾&#x2F;</span><br><span class="line">例：保存目录&#x3D;&quot;A&quot;</span><br><span class="line">127.0.0.1&#x2F;rss&#x2F;A</span><br><span class="line"></span><br><span class="line">headers：</span><br><span class="line">一般可空</span><br><span class="line"></span><br><span class="line">xp是xpath，直接在F12网页元素复制就行了</span><br><span class="line">xp 标题xp组&#x2F;链接xp组、补全 必选，其他可留空自动获取 rss封面xp留空 封面补全可自定义图片url</span><br><span class="line">组&#x3D;复数</span><br><span class="line"></span><br><span class="line">ID：</span><br><span class="line">&#39;&#x2F;&#39;表示为空 适用于无ID的单页面</span><br><span class="line">留空，可跳过此模板</span><br></pre></td></tr></table></figure>
+
+<p>config.ini    配置文件，修改需要重启软件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">True或False</span><br><span class="line">端口：</span><br><span class="line">0~65535</span><br><span class="line"></span><br><span class="line">订阅频率：</span><br><span class="line">单位秒</span><br></pre></td></tr></table></figure>
+
 <p>save.ini    重复过滤</p>
 <p><em>本质都为Python dict</em></p>
 <h2 id="运行组件"><a href="#运行组件" class="headerlink" title="运行组件"></a>运行组件</h2><p>安装 Python 3.8.6</p>
 <p><a target="_blank" rel="noopener" href="https://www.python.org/downloads/release/python-386/">https://www.python.org/downloads/release/python-386/</a></p>
 <p>（务必add Python x to PATH）</p>
 <p>安装库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br><span class="line">pip install ast</span><br><span class="line">pip install colorama</span><br><span class="line">pip install flask</span><br><span class="line">pip install lxml</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install ast</span><br><span class="line">pip install colorama</span><br><span class="line">pip install flask</span><br></pre></td></tr></table></figure>
 
-<h2 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h2><h3 id="0-4"><a href="#0-4" class="headerlink" title="0.4"></a>0.4</h3><p>现在无图片不会显示裂图了。</p>
+<p>v0.5</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests-html</span><br></pre></td></tr></table></figure>
+
+<p>v0.4 - v0.1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br><span class="line">pip install lxml</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h2><blockquote>
+<h3 id="0-5"><a href="#0-5" class="headerlink" title="0.5"></a>0.5</h3></blockquote>
+<p>新增组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests-html</span><br></pre></td></tr></table></figure>
+
+<p>可删组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip uninstall requests</span><br><span class="line">pip uninstall lxml</span><br></pre></td></tr></table></figure>
+
+<p>现在可以订阅动态页面了。</p>
+<p>订阅 动态页面 要在 model.ini 里添加变量，0为否，1为是 例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#39;http:&#x2F;&#x2F;news.baidu.com&#x2F;tech&#39;:</span><br><span class="line">        &#123;</span><br><span class="line">            &#39;过滤选项&#39;: 1,</span><br><span class="line">            &#39;保存目录&#39;: &#39;&#39;,</span><br><span class="line">            &#39;动态页面&#39;: 1,</span><br><span class="line">            ...</span><br></pre></td></tr></table></figure>
+
+<p>！订阅 动态页面 首次使用，自动下载 chromium 目录：~/.pyppeteer/</p>
+<h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p><a href="/%E9%97%B4%E4%B9%A6/%E9%97%B4%E4%B9%A6v0.5.zip">间书v0.5</a></p>
+<p>MD5: ae917a0a5f0a45dc8f06f6105451b34f<br>SHA1: 0a82eeef63c2af76d749a516e8a2e448660829c8<br>SHA256: 188e38a8a73ddcaf91ea0ec0c7397d9c7ed053d00f774af9f0c3614fc4a8eb6d</p>
+<blockquote>
+<h3 id="0-4"><a href="#0-4" class="headerlink" title="0.4"></a>0.4</h3></blockquote>
+<p>现在无图片不会显示裂图了。</p>
 <p>修复在rss/无法创建文件的bug。</p>
-<p>包改为单文件，如无原配置文件现在会自动创建data/里的文件了。</p>
-<p>添加软件版本更新订阅。（运行过的需要打开模板文件自行添加）</p>
-<p>下载</p>
-<p><a href="/%E9%97%B4%E4%B9%A6/%E9%97%B4%E4%B9%A6v0.4.zip">间书v0.4</a></p>
+<p>包改为单文件，如无原配置文件现在会自动创建 data/ 里的文件了。</p>
+<p>添加软件版本更新订阅。（运行过的需要打开包内 model.ini 查看自行添加）</p>
+<h4 id="下载-1"><a href="#下载-1" class="headerlink" title="下载"></a>下载</h4><p><a href="/%E9%97%B4%E4%B9%A6/%E9%97%B4%E4%B9%A6v0.4.zip">间书v0.4</a></p>
 <p>MD5: 13540364df52a0f721c70f9384dad12f<br>SHA1: 854883b631ae1b9eabcaaaaa2f7a940f2d455d4b<br>SHA256: 7328be097c318bcb93ad12938cc0d571d2cc9dddf1ba8a8d1f733f6dd1d81f35</p>
-<h3 id="0-3"><a href="#0-3" class="headerlink" title="0.3"></a>0.3</h3><p>修复了页面更新获取不更新的bug。</p>
-<p>下载</p>
-<p><a href="/%E9%97%B4%E4%B9%A6/%E9%97%B4%E4%B9%A6v0.3.zip">间书v0.3</a></p>
+<blockquote>
+<h3 id="0-3"><a href="#0-3" class="headerlink" title="0.3"></a>0.3</h3></blockquote>
+<p>修复了页面更新获取不更新的bug。</p>
+<h4 id="下载-2"><a href="#下载-2" class="headerlink" title="下载"></a>下载</h4><p><a href="/%E9%97%B4%E4%B9%A6/%E9%97%B4%E4%B9%A6v0.3.zip">间书v0.3</a></p>
 <p>MD5: d7dde8d5ca8a19d5d753223c11fb0be9<br>SHA1: e7c5b560106d1b8b3c7c98c6d669346c3a299ee3<br>SHA256: 93ee3ccdb5809ca200d29574f348580a6e8946c49799555f32822cd0a0af69e2</p>
-<h3 id="0-2"><a href="#0-2" class="headerlink" title="0.2"></a>0.2</h3><p>时间取整让rss客户端正确识别。</p>
+<blockquote>
+<h3 id="0-2"><a href="#0-2" class="headerlink" title="0.2"></a>0.2</h3></blockquote>
+<p>时间取整让rss客户端正确识别。</p>
 <p>加入错误异常，错误不会暂停了。</p>
-<p>下载</p>
-<p><a href="/%E9%97%B4%E4%B9%A6/%E9%97%B4%E4%B9%A6v0.2.zip">间书v0.2</a></p>
+<h4 id="下载-3"><a href="#下载-3" class="headerlink" title="下载"></a>下载</h4><p><a href="/%E9%97%B4%E4%B9%A6/%E9%97%B4%E4%B9%A6v0.2.zip">间书v0.2</a></p>
 <p>MD5: 4015ad53397ef42c93748b05559e8654<br>SHA1: 26e807fb50648e5b49a7540af24973f84c62b39f<br>SHA256: 883cf98877e98895847b504f142a77978c26a115800dc9cb1f98b8a68ef682e8</p>
-<h3 id="0-1"><a href="#0-1" class="headerlink" title="0.1"></a>0.1</h3><p>下载</p>
-<p><a href="/%E9%97%B4%E4%B9%A6/%E9%97%B4%E4%B9%A6v0.1.zip">间书v0.1</a></p>
+<blockquote>
+<h3 id="0-1"><a href="#0-1" class="headerlink" title="0.1"></a>0.1</h3></blockquote>
+<h4 id="下载-4"><a href="#下载-4" class="headerlink" title="下载"></a>下载</h4><p><a href="/%E9%97%B4%E4%B9%A6/%E9%97%B4%E4%B9%A6v0.1.zip">间书v0.1</a></p>
 <p>MD5: 7182b4008fc5bc64f43257d24a879bac<br>SHA1: e39c359e735824ac12a4b6feffcc081ab6684328<br>SHA256: 2454e2522dedb1230871377a71d1c4cfe7f78139c538bb4e06012d035fde5156</p>
 
         </section>
