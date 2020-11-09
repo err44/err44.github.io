@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN,zh-TW,en,default">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="空想">
+
+
+
+
+    <meta name="keywords" content="空想">
+
+
+<title>间书 | 空想</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="空想" type="application/atom+xml">
+<link rel="alternate" href="/rss.xml" title="空想" type="application/rss+xml">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">主页</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/category">分类</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/rss.xml">RSS</a>
+                
+                    <a class="menu-item" href="/%E5%85%B3%E4%BA%8E">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">主页</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/category">分类</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/rss.xml">RSS</a>
+                
+                    <a class="menu-item" href="/%E5%85%B3%E4%BA%8E">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">展开</a>
+        <a onclick="go_top()">顶部</a>
+        <a onclick="go_bottom()">底部</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "收起"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "展开"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+    
+    <article class="post-wrap page">
+        
+        <h2 class="post-title">间书</h2>
+        
+        <section class="post-content">
+            <p><a target="_blank" rel="noopener" href="https://t.me/err44_jianshu">Telegram群</a></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>获取页面HTML，订阅元素转为RSS，搭配本地web实现订阅动态。</p>
+<p>#Python #RSS</p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><table>
+<thead>
+<tr>
+<th>版本</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0.5+</td>
+<td>动态页面</td>
+</tr>
+<tr>
+<td>0.1+</td>
+<td>HTML元素转RSS<br />静态页面<br />单代理</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>预定实现</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>多代理<br />GUI<br />UI隐藏</td>
+</tr>
+</tbody></table>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><blockquote>
+<p>rss/</p>
+</blockquote>
+<p>无后缀xml保存目录</p>
+<blockquote>
+<p>data/</p>
+</blockquote>
+<p>model.ini 订阅模板，可动态修改</p>
+<table>
+<thead>
+<tr>
+<th>版本</th>
+<th>变量名</th>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0.5+</td>
+<td>动态页面</td>
+<td>0<br />1</td>
+<td>否<br />是</td>
+</tr>
+<tr>
+<td>0.1+</td>
+<td>过滤选项</td>
+<td>0<br />1</td>
+<td>标题去重<br />链接去重</td>
+</tr>
+<tr>
+<td></td>
+<td>保存目录</td>
+<td>“”<br />“A/“<br />“A”</td>
+<td>自动获取<br />127.0.0.1/rss/A/666<br />127.0.0.1/rss/A</td>
+</tr>
+<tr>
+<td></td>
+<td>headers</td>
+<td></td>
+<td>一般留空</td>
+</tr>
+<tr>
+<td></td>
+<td>ID</td>
+<td>‘/‘<br />留空<br />“123/video”</td>
+<td>单页面<br />跳过模板<br />适用于识别ID在链接中间的网站</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">！xp 标题xp组&#x2F;链接xp组、补全 必选，其他可留空自动获取 rss封面xp留空 封面补全可自定义图片url</span><br><span class="line">！组&#x3D;复数</span><br><span class="line">！xp是xpath，直接在F12网页元素复制就行了</span><br></pre></td></tr></table></figure>
+
+<p>config.ini 配置文件，修改需要重启软件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">True或False</span><br><span class="line"></span><br><span class="line">端口：</span><br><span class="line">0~65535</span><br><span class="line"></span><br><span class="line">订阅频率：</span><br><span class="line">单位秒</span><br></pre></td></tr></table></figure>
+
+<p>save.ini    重复过滤</p>
+<p><em>以上三个 ini 本质都为Python dict</em></p>
+<h2 id="运行组件"><a href="#运行组件" class="headerlink" title="运行组件"></a>运行组件</h2><p>安装 Python 3.8.6</p>
+<p><a target="_blank" rel="noopener" href="https://www.python.org/downloads/release/python-386/">https://www.python.org/downloads/release/python-386/</a></p>
+<p>（务必add Python x to PATH）</p>
+<p>安装库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install ast</span><br><span class="line">pip install colorama</span><br><span class="line">pip install flask</span><br></pre></td></tr></table></figure>
+
+<p>v0.5</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests-html</span><br></pre></td></tr></table></figure>
+
+<p>v0.4 - v0.1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br><span class="line">pip install lxml</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="更新历史"><a href="#更新历史" class="headerlink" title="更新历史"></a>更新历史</h2><h3 id="0-6"><a href="#0-6" class="headerlink" title="0.6"></a>0.6</h3><p>2020/11/09</p>
+<p>修复了订阅动态页面，错误后卡死的问题。</p>
+<h3 id="0-5-3"><a href="#0-5-3" class="headerlink" title="0.5.3"></a>0.5.3</h3><p>2020/11/09</p>
+<p>修复了后台浏览器一直打开的问题。<br>修复了不跳过错误的BUG。<br>加入等待提示。<br>加入动态页面加载超时。</p>
+<h3 id="0-5-2"><a href="#0-5-2" class="headerlink" title="0.5.2"></a>0.5.2</h3><p>2020/11/07</p>
+<p>修复了动态页面带来的保存目录获取BUG。</p>
+<p>修复了rss标题xp和rss简介xp获取BUG。</p>
+<p>！需要删除rss/目录。</p>
+<h3 id="0-5-1"><a href="#0-5-1" class="headerlink" title="0.5.1"></a>0.5.1</h3><p>  现在可以订阅不是ID末尾的页面了。</p>
+<p>  ID栏填:</p>
+<p>  “id/…”,</p>
+<p>  例：</p>
+<p>  “123/video”,</p>
+<p>  ！如是这种页面，尽量不要填保存目录，让他自动获取。</p>
+<h3 id="0-5"><a href="#0-5" class="headerlink" title="0.5"></a>0.5</h3><p>新增组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests-html</span><br></pre></td></tr></table></figure>
+
+<p>可删组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip uninstall requests</span><br><span class="line">pip uninstall lxml</span><br></pre></td></tr></table></figure>
+
+<p>现在可以订阅动态页面了。</p>
+<p>订阅 动态页面 要在 model.ini 里添加变量，0为否，1为是 例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#39;http:&#x2F;&#x2F;news.baidu.com&#x2F;tech&#39;:</span><br><span class="line">        &#123;</span><br><span class="line">            &#39;过滤选项&#39;: 1,</span><br><span class="line">            &#39;保存目录&#39;: &#39;&#39;,</span><br><span class="line">            &#39;动态页面&#39;: 1,</span><br><span class="line">            ...</span><br></pre></td></tr></table></figure>
+
+<p>！订阅 动态页面 首次使用，自动下载 chromium 目录：~/.pyppeteer/</p>
+<h3 id="0-4"><a href="#0-4" class="headerlink" title="0.4"></a>0.4</h3><p>现在无图片不会显示裂图了。</p>
+<p>修复在rss/无法创建文件的bug。</p>
+<p>包改为单文件，如无原配置文件现在会自动创建 data/ 里的文件了。</p>
+<p>添加软件版本更新订阅。（运行过的需要打开包内 model.ini 查看自行添加）</p>
+<h3 id="0-3"><a href="#0-3" class="headerlink" title="0.3"></a>0.3</h3><p>修复了页面更新获取不更新的bug。</p>
+<h3 id="0-2"><a href="#0-2" class="headerlink" title="0.2"></a>0.2</h3><p>时间取整让rss客户端正确识别。</p>
+<p>加入错误异常，错误不会暂停了。</p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><table>
+<thead>
+<tr>
+<th></th>
+<th>日期</th>
+<th>SHA256</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="/%E9%97%B4%E4%B9%A6/%E9%97%B4%E4%B9%A6v0.6.zip">0.6</a></td>
+<td>2020/11/09</td>
+<td>474d07113962ad3e18ccaebb3a964a52d119330c94710fc141f160e65aae5a48</td>
+</tr>
+<tr>
+<td><a href="/%E9%97%B4%E4%B9%A6/%E9%97%B4%E4%B9%A6v0.5.3.zip">0.5.3</a></td>
+<td>2020/11/09</td>
+<td>880cee612d2dfcb6db02b551da47712e082d9f2bfb366d4860ee999961387ef9</td>
+</tr>
+<tr>
+<td><a href="/%E9%97%B4%E4%B9%A6/%E9%97%B4%E4%B9%A6v0.5.2.zip">0.5.2</a></td>
+<td>2020/11/07</td>
+<td>93b52e6d05f0852c790989dbd987f3fcc31af1d646f2275e28004780fc01d05d</td>
+</tr>
+<tr>
+<td><a href="/%E9%97%B4%E4%B9%A6/%E9%97%B4%E4%B9%A6v0.5.1.zip">0.5.1</a></td>
+<td></td>
+<td>b2975ee42951cba239745d4939b35e1c8643cdd48e2385b59b5b9169506b0fdd</td>
+</tr>
+<tr>
+<td><a href="/%E9%97%B4%E4%B9%A6/%E9%97%B4%E4%B9%A6v0.5.zip">0.5</a></td>
+<td></td>
+<td>188e38a8a73ddcaf91ea0ec0c7397d9c7ed053d00f774af9f0c3614fc4a8eb6d</td>
+</tr>
+<tr>
+<td><a href="/%E9%97%B4%E4%B9%A6/%E9%97%B4%E4%B9%A6v0.4.zip">0.4</a></td>
+<td></td>
+<td>7328be097c318bcb93ad12938cc0d571d2cc9dddf1ba8a8d1f733f6dd1d81f35</td>
+</tr>
+<tr>
+<td><a href="/%E9%97%B4%E4%B9%A6/%E9%97%B4%E4%B9%A6v0.3.zip">0.3</a></td>
+<td></td>
+<td>93ee3ccdb5809ca200d29574f348580a6e8946c49799555f32822cd0a0af69e2</td>
+</tr>
+<tr>
+<td><a href="/%E9%97%B4%E4%B9%A6/%E9%97%B4%E4%B9%A6v0.2.zip">0.2</a></td>
+<td></td>
+<td>883cf98877e98895847b504f142a77978c26a115800dc9cb1f98b8a68ef682e8</td>
+</tr>
+<tr>
+<td><a href="/%E9%97%B4%E4%B9%A6/%E9%97%B4%E4%B9%A6v0.1.zip">0.1</a></td>
+<td></td>
+<td>2454e2522dedb1230871377a71d1c4cfe7f78139c538bb4e06012d035fde5156</td>
+</tr>
+</tbody></table>
+
+        </section>
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© 2020 | <a href="https://GitHub.com" target="_blank">GitHub</a> 搭载 | <a href="https://hexo.io" target="_blank">Hexo</a> 驱动 | <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a> 模板</span>
+        <!-- 空想 -->
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
