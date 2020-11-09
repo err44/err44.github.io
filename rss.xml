@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>空想</title>
+    <link>https://err44.com/</link>
+    
+    <image>
+      <url>https://err44.com/icon.png</url>
+      <title>空想</title>
+      <link>https://err44.com/</link>
+    </image>
+    
+    <atom:link href="https://err44.com/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <description></description>
+    <pubDate>Mon, 09 Nov 2020 09:00:13 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>hello-world</title>
+      <link>https://err44.com/2020/09/27/hello-world/</link>
+      <guid>https://err44.com/2020/09/27/hello-world/</guid>
+      <pubDate>Sat, 26 Sep 2020 21:26:41 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h1 id=&quot;2019-07-05-21-27-59&quot;&gt;&lt;a href=&quot;#2019-07-05-21-27-59&quot; class=&quot;headerlink&quot; title=&quot;2019-07-05 21:27:59&quot;&gt;&lt;/a&gt;2019-07-05</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://err44.com/categories/%E5%88%9D%E5%A7%8B/">初始</category>
+      
+      
+      <category domain="https://err44.com/tags/%E5%88%9D%E5%A7%8B/">初始</category>
+      
+      <category domain="https://err44.com/tags/hello-world/">hello-world</category>
+      
+      
+      <comments>https://err44.com/2020/09/27/hello-world/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>
